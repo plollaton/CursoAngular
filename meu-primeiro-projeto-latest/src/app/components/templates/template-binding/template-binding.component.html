@@ -1,0 +1,23 @@
+<h2>Templates</h2>
+<h3>Text Interpolation</h3>
+{{ name }} - {{ age }} - {{ sum(1,2) }}
+<h3>Property Binding</h3>
+<button [disabled]="isDisabled">Teste</button>
+<!-- <img [src]="srcValue"/> -->
+<h3>Attribute Binding</h3>
+<p [attr.title]="name" [attr.aria-label]="name">Pio Neto</p>
+
+<h3>Class and Style binding</h3>
+<p [class.background-red]="age >= 32"  [class.background-blue]="age === 32">
+    {{ name }}
+</p>
+<p [style.text-decoration]="'underline'">
+    {{ age }}
+</p>
+                                    
+<h3>Event Binding</h3>
+<button (click)="sum2()"> + </button>
+<button (click)="sub()"> - </button>
+<input (keydown.shift.t)="onKeyDown($event)" />
+<div style="background: red; width: 300px; height: 300px; margin-top: 10px"
+     (mousemove)="onMouseMove($event)"></div>
